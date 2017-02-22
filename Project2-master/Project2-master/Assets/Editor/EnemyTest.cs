@@ -59,11 +59,11 @@ public class EnemyTool : EditorWindow {
 
 
 
-    if (newString==null)
+    if (nameFlag==true)
         {
             EditorGUILayout.HelpBox("Name cannot be blank", MessageType.Error);
         }
-    if(newSprite==null)
+    if(spriteFlag==true)
         {
            EditorGUILayout.HelpBox("Sprite cannot be empty", MessageType.Error);
         }
@@ -136,13 +136,13 @@ public class EnemyTool : EditorWindow {
 
     private void CreateEnemy()
     {
-    if (newString == null)
+    if (newString==null)
     {
-      EditorGUILayout.HelpBox("Name cannot be blank", MessageType.Error);
+            nameFlag = true;
     }
-    if (newSprite == null)
+    if (newSprite==null)
     {
-      EditorGUILayout.HelpBox("Sprite cannot be empty", MessageType.Error);
+            spriteFlag = true;
     }
     else
         {
@@ -156,7 +156,8 @@ public class EnemyTool : EditorWindow {
             myEnemy.mySprite = newSprite;
             myEnemy.isMagic = isMagic;
             myEnemy.manaPool = mana;
-      AssetDatabase.CreateAsset(myEnemy, "Assets/Resources/Data/EnemyData/" + myEnemy.emname.Replace(" ", "_") + ".asset");
+            getEnemies();
+            AssetDatabase.CreateAsset(myEnemy, "Assets/Resources/Data/EnemyData/" + myEnemy.emname.Replace(" ", "_") + ".asset");
       getEnemies();
       AssetDatabase.SaveAssets();
     }

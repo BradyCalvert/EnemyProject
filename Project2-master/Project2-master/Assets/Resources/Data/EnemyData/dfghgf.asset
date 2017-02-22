@@ -9,14 +9,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d138a345c8a85d4cbf573b9d5f3dc80, type: 3}
-  m_Name: test2
+  m_Name: dfghgf
   m_EditorClassIdentifier: 
-  emname: test2
-  health: 74
+  emname: dfghgf
+  health: 1
   atk: 1
-  def: 32
-  agi: 1
-  atkTime: 1
-  isMagic: 1
-  manaPool: 38
-  mySprite: {fileID: 21300000, guid: e21cb9cf3509ccc49b88d9fe4f9858f4, type: 3}
+  def: 78
+  agi: 79
+  atkTime: 15.9
+  isMagic: 0
+  manaPool: 0
+  mySprite: {fileID: 21300000, guid: 5b34327612ff7f34992e33146e0be899, type: 3}
