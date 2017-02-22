@@ -112,6 +112,7 @@ public class EnemyTool : EditorWindow {
     {
 
         enemyList.Clear();
+        //enemyNameList.Clear();
         string[] guids = AssetDatabase.FindAssets("t:Enemies",null);
         foreach (string guid in guids)
         {
@@ -125,15 +126,16 @@ public class EnemyTool : EditorWindow {
         {
             enemyNameList.Add(e.emname);
         }
+        //enemyNameList.Clear();
         enemyNameList.Insert(0, "New");
         enemyNames = enemyNameList.ToArray();
+        enemyNameList.Clear();
     }
 
 
 
     private void CreateEnemy()
     {
-    //Enemies myEnemy = ScriptableObject.CreateInstance<Enemies>();
     if (newString == null)
     {
       EditorGUILayout.HelpBox("Name cannot be blank", MessageType.Error);
@@ -154,7 +156,6 @@ public class EnemyTool : EditorWindow {
             myEnemy.mySprite = newSprite;
             myEnemy.isMagic = isMagic;
             myEnemy.manaPool = mana;
-            //AssetDatabase.CreateAsset(myEnemy, "Assets/Resources/Data/EnemyData/" + myEnemy.emname.Replace(" ", "_") + ".asset");
       AssetDatabase.CreateAsset(myEnemy, "Assets/Resources/Data/EnemyData/" + myEnemy.emname.Replace(" ", "_") + ".asset");
       getEnemies();
       AssetDatabase.SaveAssets();

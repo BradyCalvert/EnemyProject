@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Name: Brady
   m_EditorClassIdentifier: 
   emname: Brady
-  health: 80
-  atk: 30
-  def: 49
-  agi: 54
-  atkTime: 13.3
+  health: 74
+  atk: 1
+  def: 1
+  agi: 1
+  atkTime: 1
   isMagic: 0
   manaPool: 0
-  mySprite: {fileID: 0}
+  mySprite: {fileID: 21300000, guid: e21cb9cf3509ccc49b88d9fe4f9858f4, type: 3}
